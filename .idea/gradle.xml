@@ -14,7 +14,11 @@
             <option value="$PROJECT_DIR$/news" />
             <option value="$PROJECT_DIR$/news/news_data" />
             <option value="$PROJECT_DIR$/news/news_domain" />
-            <option value="$PROJECT_DIR$/news/newspresantion" />
+            <option value="$PROJECT_DIR$/news/news_presantion" />
+            <option value="$PROJECT_DIR$/search" />
+            <option value="$PROJECT_DIR$/search/search_data" />
+            <option value="$PROJECT_DIR$/search/search_domain" />
+            <option value="$PROJECT_DIR$/search/search_presantation" />
           </set>
         </option>
       </GradleProjectSettings>
