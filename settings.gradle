@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MultiModuleExampleApp"
 include ':app'
+include ':news:news_data'
+include ':news:news_domain'
+include ':news:newspresantion'

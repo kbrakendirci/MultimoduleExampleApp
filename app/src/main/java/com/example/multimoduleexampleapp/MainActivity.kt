@@ -1,4 +1,4 @@
-erpackage com.example.multimoduleexampleapp
+package com.example.multimoduleexampleapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
