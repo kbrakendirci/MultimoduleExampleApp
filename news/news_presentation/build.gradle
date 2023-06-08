@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.search_presantation'
+    namespace 'com.example.news_presantation'
     compileSdk 32
 
     defaultConfig {
-        minSdk 23
+        minSdk 21
         targetSdk 32
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -28,16 +28,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dexOptions {
+        preDexLibraries = false
+    }
+    project.ext {
+        excludeAppGlideModule = true
+    }
 }
 
 dependencies {
+
     implementation project(":common:common_utils")
 
     implementation Deps.core
     implementation Deps.appCompat
     implementation Deps.androidMaterial
     implementation Deps.constraintLayout
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation TestImplementation.junit
