@@ -48,4 +48,7 @@ dependencies {
     implementation Retrofit.retrofit
     implementation Retrofit.gsonConvertor
     implementation Retrofit.okHttp
+    implementation Retrofit.okHttpLog
+
+
 }

@@ -1,5 +1,6 @@
 package com.example.news_data.di
 
+import android.util.Log
 import com.example.news_data.network.NewsApiService
 import com.example.news_data.repository.NewsRepoImplement
 import com.example.news_domain.repository.NewsRepository
@@ -15,6 +16,7 @@ object NewsDataModule {
 
     @Provides
     fun provideNewsApiService(retrofit: Retrofit): NewsApiService {
+        Log.d("okHttp","${retrofit.create(NewsApiService::class.java)}")
         return retrofit.create(NewsApiService::class.java)
     }
 

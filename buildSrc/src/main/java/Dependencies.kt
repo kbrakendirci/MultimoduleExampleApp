@@ -12,6 +12,7 @@ object Versions {
     const val gsonConvertor = "2.9.0"
     const val okHttp = "4.9.0"
     const val scalerConvertor = "2.1.0"
+    const val retrofitInterceptorVersion="5.0.0-alpha.10"
 
     const val kotlinCoroutines = "1.6.1"
 
@@ -58,8 +59,13 @@ object Retrofit {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val gsonConvertor = "com.squareup.retrofit2:converter-gson:${Versions.gsonConvertor}"
     const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
-    const val scalersConvertors =
-        "com.squareup.retrofit2:converter-scalars:${Versions.scalerConvertor}"
+    const val scalersConvertors = "com.squareup.retrofit2:converter-scalars:${Versions.scalerConvertor}"
+    const val okHttpLog = "com.squareup.okhttp3:logging-interceptor:${Versions.retrofitInterceptorVersion}"
+    const val   retrofitVersion = "2.9.0"
+    const val moshiVersion = "1.13.0"
+    const val gsonVersion = "2.9.1"
+    const val retrofitInterceptorVersion = "5.0.0-alpha.10"
+    const val moshiConverterVersion = "2.9.0"
 }
 
 object Coroutines {
