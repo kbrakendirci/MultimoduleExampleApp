@@ -2,6 +2,8 @@ package com.example.multimoduleexampleapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.core.content.ContextCompat
 import com.example.common_utils.Activities
 import com.example.common_utils.Navigator
@@ -22,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this,R.color.white)
         _binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        Handler(Looper.myLooper()!!).postDelayed({
+            provider.getActivities(Activities.NewsActivity).navigate(this)
+            finish()
+        },1500)
 
         provider.getActivities(Activities.NewsActivity).navigate(this)
     }

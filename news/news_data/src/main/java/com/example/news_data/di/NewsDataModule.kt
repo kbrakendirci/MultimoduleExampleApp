@@ -3,6 +3,7 @@ package com.example.news_data.di
 import android.util.Log
 import com.example.news_data.network.NewsApiService
 import com.example.news_data.repository.NewsRepoImplement
+import com.example.news_data.room.NewsDao
 import com.example.news_domain.repository.NewsRepository
 import dagger.Module
 import dagger.Provides
@@ -22,8 +23,8 @@ object NewsDataModule {
 
 
     @Provides
-    fun provideNewsRepository(newsApiService: NewsApiService): NewsRepository {
-        return NewsRepoImplement(newsApiService)
+    fun provideNewsRepository(newsApiService: NewsApiService,newsDao: NewsDao): NewsRepository {
+        return NewsRepoImplement(newsApiService,newsDao)
     }
 
 
