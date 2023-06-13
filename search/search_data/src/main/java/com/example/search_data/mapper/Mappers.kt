@@ -1,4 +1,4 @@
-package com.example.news_data.mapper
+package com.example.search_data.mapper
 
 import com.example.search_data.model.ArticleDTO
 import com.example.search_domain.model.Article

@@ -14,6 +14,7 @@ import com.example.news_presantation.R
 import com.example.news_presantation.databinding.ActivityNewsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class NewsActivity : AppCompatActivity() {
@@ -31,6 +32,10 @@ class NewsActivity : AppCompatActivity() {
         }
     }
 
+    @Inject
+    lateinit var provider:Navigator.Provider
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityNewsBinding.inflate(layoutInflater)
@@ -43,6 +48,9 @@ class NewsActivity : AppCompatActivity() {
 
     private fun initView() {
         binding.rvArticles.adapter = newsAdapter
+        binding.ivGoToSearch.setOnClickListener {
+            provider.getActivities(Activities.SearchActivity).navigate(this)
+        }
     }
 
     private fun setObservers() {

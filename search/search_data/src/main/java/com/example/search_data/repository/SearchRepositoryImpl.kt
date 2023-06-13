@@ -1,6 +1,7 @@
 package com.example.search_data.repository
 
-import com.example.news_data.mapper.toDomainArticle
+
+import com.example.search_data.mapper.toDomainArticle
 import com.example.search_data.network.SearchApi
 import com.example.search_domain.model.Article
 import com.example.search_domain.repository.SearchRepository
