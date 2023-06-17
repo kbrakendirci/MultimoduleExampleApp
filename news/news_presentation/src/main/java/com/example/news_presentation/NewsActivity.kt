@@ -10,7 +10,6 @@ import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.common_utils.Activities
 import com.example.common_utils.Navigator
-import com.example.news_presantation.R
 import com.example.news_presantation.databinding.ActivityNewsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -74,7 +73,7 @@ class NewsActivity : AppCompatActivity() {
 }
 
 object GoToNewsActivity : Navigator {
-    override fun navigate(activity: Activity) {
+    override fun navigate(activity: Activity, bundle: Bundle?) {
         NewsActivity.launchActivity(activity)
     }
 }

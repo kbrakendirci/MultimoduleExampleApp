@@ -1,5 +1,8 @@
 package com.example.multimoduleexampleapp.navigation
 
+import android.util.Log
+import android.widget.Toast
+import com.example.category_presentation.GoToNewsCategoryActivity
 import com.example.common_utils.Activities
 import com.example.common_utils.Navigator
 import com.example.news_presentation.GoToNewsActivity
@@ -14,6 +17,9 @@ class DefaultNavigator : Navigator.Provider {
             }
             Activities.SearchActivity -> {
                 GoToSearchActivity
+            }
+            Activities.NewsCategoryActivity -> {
+                GoToNewsCategoryActivity
             }
         }
     }

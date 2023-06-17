@@ -54,6 +54,10 @@ dependencies {
     implementation project(":search:search_domain")
     implementation project(":search:search_data")
 
+    implementation project(":category:category_data")
+    implementation project(":category:category_domain")
+    implementation project(":category:category_presentation")
+
 
     //implementation 'androidx.core:core-ktx:1.7.0'
     implementation Deps.core

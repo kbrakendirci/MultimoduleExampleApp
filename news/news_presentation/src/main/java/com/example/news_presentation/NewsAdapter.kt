@@ -17,12 +17,10 @@ class NewsAdapter :RecyclerView.Adapter<NewsAdapter.MyViewHolder>(){
         notifyItemInserted(this.list.lastIndex)
     }
 
-    inner class MyViewHolder(val viewDataBinding: ViewHolderArticlesBinding) :
-        RecyclerView.ViewHolder(viewDataBinding.root)
+    inner class MyViewHolder(val viewDataBinding: ViewHolderArticlesBinding) : RecyclerView.ViewHolder(viewDataBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding =
-            ViewHolderArticlesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ViewHolderArticlesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
     }
 

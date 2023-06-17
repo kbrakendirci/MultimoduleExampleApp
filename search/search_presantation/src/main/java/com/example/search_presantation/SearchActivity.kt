@@ -105,7 +105,7 @@ class SearchActivity : AppCompatActivity() {
 }
 
 object GoToSearchActivity: Navigator {
-    override fun navigate(activity: Activity) {
+    override fun navigate(activity: Activity, bundle: Bundle?) {
         SearchActivity.launchActivity(activity)
     }
 }

@@ -26,10 +26,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Handler(Looper.myLooper()!!).postDelayed({
-            provider.getActivities(Activities.NewsActivity).navigate(this)
+            provider.getActivities(Activities.NewsCategoryActivity).navigate(this)
             finish()
         },1500)
 
-        provider.getActivities(Activities.NewsActivity).navigate(this)
+        provider.getActivities(Activities.NewsCategoryActivity).navigate(this)
     }
 }
