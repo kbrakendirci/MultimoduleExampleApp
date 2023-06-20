@@ -10,6 +10,8 @@ fun ArticleDTO.toDomainArticle(): Article {
         content = this.content?:"",
         description = this.description?:"",
         title = this.title?:"",
-        urlToImage = this.urlToImage?:""
+        urlToImage = this.urlToImage?:"",
+        publishedAt = this.publishedAt?:"",
+        url = this.url?:""
     )
 }

@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings.Global.getString
+import android.provider.Settings.Secure.getString
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -23,10 +25,14 @@ class NewsActivity : AppCompatActivity() {
 
     private val newsViewModel: NewsViewModel by viewModels()
     private val newsAdapter = NewsAdapter()
+    private var category: String? = null
 
     companion object {
-        fun launchActivity(activity: Activity) {
+        fun launchActivity(activity: Activity, extras: Bundle?) {
             val intent = Intent(activity, NewsActivity::class.java)
+            extras?.let {
+                intent.putExtras(it)
+            }
             activity.startActivity(intent)
         }
     }
@@ -41,7 +47,6 @@ class NewsActivity : AppCompatActivity() {
         setContentView(binding.root)
         initView()
         setObservers()
-
     }
 
 
@@ -49,6 +54,10 @@ class NewsActivity : AppCompatActivity() {
         binding.rvArticles.adapter = newsAdapter
         binding.ivGoToSearch.setOnClickListener {
             provider.getActivities(Activities.SearchActivity).navigate(this)
+        }
+        if (intent.hasExtra("CATEGORY")) {
+            category= intent.getStringExtra("CATEGORY")
+            newsViewModel.getNewsCategory("$category")
         }
     }
 
@@ -71,9 +80,10 @@ class NewsActivity : AppCompatActivity() {
 
     }
 }
-
+//bundle.getString("key1")
 object GoToNewsActivity : Navigator {
     override fun navigate(activity: Activity, bundle: Bundle?) {
-        NewsActivity.launchActivity(activity)
+        NewsActivity.launchActivity(activity,bundle)
     }
+
 }

@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.news_data.room.NewsDao
 import com.example.news_domain.model.Article
 
-@Database(entities = [Article::class], version = 1, exportSchema = false)
+@Database(entities = [Article::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     companion object {
         fun getInstance(context: Context): AppDatabase {

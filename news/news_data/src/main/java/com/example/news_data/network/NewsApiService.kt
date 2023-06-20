@@ -13,4 +13,11 @@ interface NewsApiService {
         @Query("category") category: String=Constant.CATEGORY,
         @Query("apiKey") apiKey:String = Constant.API_KEY
     ):NewsResponse
+
+    @GET("top-headlines")
+    suspend fun getNewsCategory(
+        @Query("country") country:String,
+        @Query("category") category: String,
+        @Query("apiKey") apiKey:String = Constant.API_KEY
+    ):NewsResponse
 }

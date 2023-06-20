@@ -54,6 +54,7 @@ dependencies {
     implementation Retrofit.retrofit
     implementation Retrofit.gsonConvertor
     implementation Retrofit.okHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:4.0.1"
 
     implementation Room.room
     kapt Room.roomCompiler

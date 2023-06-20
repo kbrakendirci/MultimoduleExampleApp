@@ -16,4 +16,14 @@ class NewsRepoImplement(private val newsApiService: NewsApiService,private val n
             newsDao.getNesArticle()
         }
     }
+
+    override suspend fun getNewsCategory(category: String): List<Article> {
+       return try {
+           val temp = newsApiService.getNewsCategory(country = "us", category = category).articles.map { it.toDomainArticle() }
+           newsDao.insertList(temp)
+           newsDao.getNesArticle()
+       }catch (e:Exception){
+           newsDao.getNesArticle()
+       }
+    }
 }
