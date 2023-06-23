@@ -22,6 +22,10 @@
             <option value="$PROJECT_DIR$/news/news_data" />
             <option value="$PROJECT_DIR$/news/news_domain" />
             <option value="$PROJECT_DIR$/news/news_presentation" />
+            <option value="$PROJECT_DIR$/newsdetail" />
+            <option value="$PROJECT_DIR$/newsdetail/newsdetail_data" />
+            <option value="$PROJECT_DIR$/newsdetail/newsdetail_domain" />
+            <option value="$PROJECT_DIR$/newsdetail/newsdetail_presentation" />
             <option value="$PROJECT_DIR$/search" />
             <option value="$PROJECT_DIR$/search/search_data" />
             <option value="$PROJECT_DIR$/search/search_domain" />

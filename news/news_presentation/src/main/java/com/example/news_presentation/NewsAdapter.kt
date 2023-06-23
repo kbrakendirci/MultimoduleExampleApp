@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.news_domain.model.Article
 import com.example.news_presantation.databinding.ViewHolderArticlesBinding
 
-class NewsAdapter :RecyclerView.Adapter<NewsAdapter.MyViewHolder>(){
+class NewsAdapter(private var listener: OnItemClickListener):RecyclerView.Adapter<NewsAdapter.MyViewHolder>(){
     private var list = listOf<Article>()
 
     fun setData(list: List<Article>) {
@@ -30,11 +30,18 @@ class NewsAdapter :RecyclerView.Adapter<NewsAdapter.MyViewHolder>(){
             ivArticle.loadImage(item.urlToImage)
             tvHeadlines.text = item.title
             tvContent.text = item.content
+            if (listener != null) {
+                newsDetailCl.setOnClickListener { listener.onItemClick(item) }
+            }
         }
     }
 
     override fun getItemCount(): Int {
         return this.list.size
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(title: Article)
     }
 
     fun ImageView.loadImage(url: String) {

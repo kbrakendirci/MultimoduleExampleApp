@@ -58,6 +58,10 @@ dependencies {
     implementation project(":category:category_domain")
     implementation project(":category:category_presentation")
 
+    implementation project(":newsdetail:newsdetail_domain")
+    implementation project(":newsdetail:newsdetail_data")
+    implementation project(":newsdetail:newsdetail_presentation")
+
 
     //implementation 'androidx.core:core-ktx:1.7.0'
     implementation Deps.core

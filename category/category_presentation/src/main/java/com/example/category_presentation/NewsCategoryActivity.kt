@@ -55,7 +55,6 @@ class NewsCategoryActivity : AppCompatActivity(), CategoryAdapter.OnItemClickLis
     @Inject
     lateinit var provider: Navigator.Provider
     override fun onItemClick(category: Category) {
-
         val bundle = Bundle()
         val category = category.text
         bundle.putString("CATEGORY", "$category")

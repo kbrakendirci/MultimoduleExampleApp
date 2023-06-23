@@ -27,5 +27,4 @@ object NewsDataModule {
         return NewsRepoImplement(newsApiService,newsDao)
     }
 
-
 }

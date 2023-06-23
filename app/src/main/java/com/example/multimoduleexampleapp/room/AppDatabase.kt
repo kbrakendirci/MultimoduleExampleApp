@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.news_data.room.NewsDao
 import com.example.news_domain.model.Article
+import com.example.newsdetail_data.room.NewsDetailDao
 
 @Database(entities = [Article::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
@@ -17,4 +18,7 @@ abstract class AppDatabase : RoomDatabase() {
     }
 
     abstract fun getNewsDao():NewsDao
+
+    abstract fun getNewsDetailDao():NewsDetailDao
+
 }

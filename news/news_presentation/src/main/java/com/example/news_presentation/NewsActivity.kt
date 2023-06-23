@@ -4,27 +4,26 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings.Global.getString
-import android.provider.Settings.Secure.getString
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.common_utils.Activities
 import com.example.common_utils.Navigator
+import com.example.news_domain.model.Article
 import com.example.news_presantation.databinding.ActivityNewsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class NewsActivity : AppCompatActivity() {
+class NewsActivity : AppCompatActivity(),NewsAdapter.OnItemClickListener {
 
     private var _binding: ActivityNewsBinding? = null
     private val binding: ActivityNewsBinding get() = _binding!!
 
     private val newsViewModel: NewsViewModel by viewModels()
-    private val newsAdapter = NewsAdapter()
+    private val newsAdapter = NewsAdapter(this)
     private var category: String? = null
 
     companion object {
@@ -39,7 +38,6 @@ class NewsActivity : AppCompatActivity() {
 
     @Inject
     lateinit var provider:Navigator.Provider
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,7 +75,13 @@ class NewsActivity : AppCompatActivity() {
                 }
             }
         }
+    }
 
+    override fun onItemClick(item: Article) {
+        val bundle=Bundle()
+        val title = item.title
+        bundle.putString("Title","$title")
+        provider.getActivities(Activities.NewsDetailActivity).navigate(this,bundle)
     }
 }
 //bundle.getString("key1")
@@ -85,5 +89,4 @@ object GoToNewsActivity : Navigator {
     override fun navigate(activity: Activity, bundle: Bundle?) {
         NewsActivity.launchActivity(activity,bundle)
     }
-
 }

@@ -5,6 +5,7 @@ import com.example.common_utils.Navigator
 import com.example.multimoduleexampleapp.navigation.DefaultNavigator
 import com.example.multimoduleexampleapp.room.AppDatabase
 import com.example.news_data.room.NewsDao
+import com.example.newsdetail_data.room.NewsDetailDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,5 +32,10 @@ object MainModule {
     @Provides
     fun provideNewsDao(appDatabase: AppDatabase):NewsDao{
         return appDatabase.getNewsDao()
+    }
+
+    @Provides
+    fun provideNewsDetailDao(appDatabase: AppDatabase):NewsDetailDao{
+        return appDatabase.getNewsDetailDao()
     }
 }

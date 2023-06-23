@@ -6,6 +6,7 @@ import com.example.category_presentation.GoToNewsCategoryActivity
 import com.example.common_utils.Activities
 import com.example.common_utils.Navigator
 import com.example.news_presentation.GoToNewsActivity
+import com.example.newsdetail_presentation.GoToNewsDetailActivity
 import com.example.search_presantation.GoToSearchActivity
 
 class DefaultNavigator : Navigator.Provider {
@@ -20,6 +21,9 @@ class DefaultNavigator : Navigator.Provider {
             }
             Activities.NewsCategoryActivity -> {
                 GoToNewsCategoryActivity
+            }
+            Activities.NewsDetailActivity ->{
+                GoToNewsDetailActivity
             }
         }
     }
