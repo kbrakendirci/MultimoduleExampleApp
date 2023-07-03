@@ -14,8 +14,9 @@ import javax.inject.Inject
 class NewsDetailViewModel @Inject constructor(
     private val getNewsDetailUseCase: GetNewsDetailUseCase
 ):ViewModel(){
-    private  val _newsArticle = MutableStateFlow(NewsState())
-    val newsArticle : StateFlow<NewsState> = _newsArticle
+
+    private val _newsDetailResultState = MutableStateFlow(NewsState())
+    val newsDetailResultState : StateFlow<NewsState> = _newsDetailResultState
 
     init {
         //getNewsArticles()
@@ -26,13 +27,13 @@ class NewsDetailViewModel @Inject constructor(
             getNewsDetailUseCase.invoke(title).collect{
                 when(it){
                     is Resource.Success->{
-                        _newsArticle.value = NewsState(data = it.data)
+                        _newsDetailResultState.value = NewsState(data =it.data)
                     }
                     is Resource.Error ->{
-                        _newsArticle.value = NewsState(error = it.message)
+                        _newsDetailResultState.value = NewsState(error = it.message)
                     }
                     is Resource.Loading ->{
-                        _newsArticle.value = NewsState(isLoading = true)
+                        _newsDetailResultState.value = NewsState(isLoading = true)
                     }
                 }
             }

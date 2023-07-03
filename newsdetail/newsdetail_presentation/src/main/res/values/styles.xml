@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+
+        <!-- For Android sdk versions 26+. -->
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_slab</item>
+        <!-- Target Android sdk versions < 26 and > 14. -->
+        <item name="fontFamily">@font/roboto_slab</item>
+    </style>
+
+    <style name="Toolbar" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextAppearance" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:fontFamily">@font/roboto_slab</item>
+        <item name="fontFamily">@font/roboto_slab</item>
+    </style>
+
+    <style name="TextAppearance.Bold">
+        <item name="android:fontFamily">@font/roboto_slab_bold</item>
+        <item name="fontFamily">@font/roboto_slab_bold</item>
+    </style>
+
+    <style name="TextAppearance.Bold.Headline">
+        <item name="android:textSize">29sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="TextAppearance.Subtitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#f2f2f2</item>
+    </style>
+
+    <style name="TextAppearance.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#bababa</item>
+    </style>
+
+    <style name="TextAppearance.Bold.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#bababa</item>
+    </style>
+
+    <style name="TextAppearance.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#bababa</item>
+    </style>
+
+</resources>

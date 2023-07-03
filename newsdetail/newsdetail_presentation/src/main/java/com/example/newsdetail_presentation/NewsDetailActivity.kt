@@ -5,9 +5,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import com.bumptech.glide.Glide
 import com.example.common_utils.Navigator
 import com.example.newsdetail_presentation.databinding.ActivityNewsDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,8 +48,8 @@ class NewsDetailActivity : AppCompatActivity() {
 
     private fun setObservers() {
         lifecycleScope.launchWhenStarted {
-            newsViewModel.newsArticle.collectLatest {
-                if (it.isLoading) {
+            newsViewModel.newsDetailResultState.collectLatest {
+                if (it.isLoading as Boolean) {
                     //binding.progressBar.visibility = View.VISIBLE
                 }
                 if (it.error.isNotBlank()) {
@@ -54,6 +57,12 @@ class NewsDetailActivity : AppCompatActivity() {
                     Toast.makeText(this@NewsDetailActivity, it.error, Toast.LENGTH_LONG).show()
                 }
                 it.data?.let {
+                    val data = it[0]
+                    binding.tVNewsDetailDescription.text = data.description
+                    binding.tvNewstitle.text = data.title
+                    binding.textViewPublishedAt.text = data.publishedAt
+                    binding.ivNewsDetail.loadImage(data.urlToImage)
+
 
                 }
             }
@@ -65,6 +74,16 @@ class NewsDetailActivity : AppCompatActivity() {
             title= intent.getStringExtra("Title")
             newsViewModel.getNewsCategory("$title")
         }
+
+    }
+
+    private fun ImageView.loadImage(url: String) {
+        val circularProgressDrawable = CircularProgressDrawable(this.context)
+        circularProgressDrawable.strokeWidth = 5f
+        circularProgressDrawable.centerRadius = 30f
+        circularProgressDrawable.start()
+        Glide.with(this).load(url).placeholder(circularProgressDrawable)
+            .error(com.google.android.material.R.drawable.mtrl_ic_error).into(this)
     }
 }
 

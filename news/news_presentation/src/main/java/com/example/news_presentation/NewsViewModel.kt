@@ -4,6 +4,7 @@ import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.common_utils.Resource
+import com.example.news_domain.model.Article
 import com.example.news_domain.usecase.GetNewsArticleUseCase
 import com.example.news_domain.usecase.GetNewsCategoryUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
