@@ -62,8 +62,6 @@ class NewsDetailActivity : AppCompatActivity() {
                     binding.tvNewstitle.text = data.title
                     binding.textViewPublishedAt.text = data.publishedAt
                     binding.ivNewsDetail.loadImage(data.urlToImage)
-
-
                 }
             }
         }

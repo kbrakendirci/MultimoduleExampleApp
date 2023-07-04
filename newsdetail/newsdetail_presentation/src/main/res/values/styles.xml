@@ -27,17 +27,17 @@
 
     <style name="TextAppearance.Bold.Headline">
         <item name="android:textSize">29sp</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
     <style name="TextAppearance.Subtitle">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#f2f2f2</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
     <style name="TextAppearance.Body1">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">#bababa</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
     <style name="TextAppearance.Bold.Caption">

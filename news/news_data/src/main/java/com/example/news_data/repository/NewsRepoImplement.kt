@@ -21,7 +21,7 @@ class NewsRepoImplement(private val newsApiService: NewsApiService,private val n
        return try {
            val temp = newsApiService.getNewsCategory(country = "us", category = category).articles.map { it.toDomainArticle() }
            newsDao.insertList(temp)
-           newsDao.getNesArticle()
+           return temp
        }catch (e:Exception){
            newsDao.getNesArticle()
        }

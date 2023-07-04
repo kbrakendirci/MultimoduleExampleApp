@@ -29,7 +29,7 @@ class NewsAdapter(private var listener: OnItemClickListener):RecyclerView.Adapte
             val item = list[position]
             ivArticle.loadImage(item.urlToImage)
             tvHeadlines.text = item.title
-            tvContent.text = item.content
+            tvContent.text = item.description
             if (listener != null) {
                 newsDetailCl.setOnClickListener { listener.onItemClick(item) }
             }
