@@ -1,6 +1,6 @@
 News App 
 
-Technologies used:
+Kullanılan Teknolojiler :
 
 • Clean Architecture
 
@@ -30,7 +30,8 @@ Technologies used:
 
 Modül Oluşturmak
 
-Android studio üzerinde Go to file -> News -> News Module -> Android Library -> Modül ismi verilir (news )
+Android studio üzerinde 
+Go to file -> News -> News Module -> Android Library -> Modül ismi verilir (news )
 News modülünün altında yeni modüller (news_data, news_domain, news_presentation) oluşturulur.
 Aynı adımlar search,category,common modülleri için tekrarlanır.
 
