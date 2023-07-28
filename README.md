@@ -44,7 +44,7 @@ Modül Oluşturmak
 Build.Gradle
 
 Kotlin ile derleme mantığımızı sorunsuz bir şekilde yazmak ve Gradle dosyalarına eklemek için kotlin-dsl eklentisinden de yararlanacağız.
-Aynı kütüphaneye bağlı birden fazla modül varsa, kütüphanenin sürümünü ortak bir classtan kolayca alabilir .Bu nedenle buildSrc dizini ve build.gradle.kts dosyası oluşturulur.
+Çok modüllü projelerde benzer içeriklere sahip builds.gradle dosyaları bulunur. Aynı kütüphaneye bağlı birden fazla modül varsa,kütüphanenin sürümünü ortak bir classtan kolayca alabilir. Bu nedenle buildSrc dizini ve build.gradle.kts dosyası oluşturulur.
 
 1-) MultiModuleExampleApp ana modülü -> New -> Directory ->buildSrc isimli dizin oluşturulur.
 
