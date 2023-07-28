@@ -30,15 +30,17 @@ Kullanılan Teknolojiler :
 
 Modül Oluşturmak
 
-Android studio üzerinde 
-Go to file -> News -> News Module -> Android Library -> Modül ismi verilir (news )
+Android studio üzerinde Go to file -> News -> News Module -> Android Library -> Modül ismi verilir (news )
+
 News modülünün altında yeni modüller (news_data, news_domain, news_presentation) oluşturulur.
+
 Aynı adımlar search,category,common modülleri için tekrarlanır.
 
 ![image](https://github.com/kbrakendirci/MultimoduleExampleApp/assets/43795927/0480d193-9e9a-48e6-9d95-d5ef1fa0a23e)
 
 
 Build.Gradle
+
 Kotlin ile derleme mantığımızı sorunsuz bir şekilde yazmak ve Gradle dosyalarına eklemek için kotlin-dsl eklentisinden de yararlanacağız .
 Aynı kütüphaneye bağlı birden fazla modül varsa, kütüphanenin sürümünü ortak bir classtan kolayca alabilir .Bu nedenle buildSrc dizini ve build.gradle.kts dosyası oluşturulur.
 
@@ -53,7 +55,7 @@ Aynı kütüphaneye bağlı birden fazla modül varsa, kütüphanenin sürümün
 ![image](https://github.com/kbrakendirci/MultimoduleExampleApp/assets/43795927/1bcade89-b10d-49f1-be31-cdf2ccafbac0)
 
 
-5-) Kullanılmak istenen kütüphanelerin sürümlerini Dependencies.ktdosyasına ekleyin;
+5-) Kullanılmak istenen kütüphanelerin sürümlerini Dependencies.kt dosyasına ekleyin;
 
 ```
 object Versions {
