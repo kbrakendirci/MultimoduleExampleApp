@@ -39,11 +39,11 @@ app
 
 •news
 
-  data
+    data
   
-  domain
+    domain
   
-  presentation
+    presentation
   
 •news-details
 
