@@ -36,9 +36,8 @@ Modularisation is done based in feature and then layer
 
 app
 *core
-
 *news
-    *data
+   *data
     *domain
     *presentation
   
