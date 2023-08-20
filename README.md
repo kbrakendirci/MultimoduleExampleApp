@@ -35,15 +35,15 @@ A News Application that leverages advanced modularization concepts, modern andro
 Modularisation is done based in feature and then layer
 
 app
-•core
+*core
 
-•news
+*news
 
-    •data
+    *data
   
-    •domain
+    *domain
   
-    •presentation
+    *presentation
   
 •news-details
 
