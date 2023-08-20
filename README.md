@@ -35,6 +35,9 @@ A News Application that leverages advanced modularization concepts, modern andro
 Modularisation is done based in feature and then layer
 
 app
+100. First list item
+       - First nested list item
+         - Second nested list item
 *core
 *news
    *data
