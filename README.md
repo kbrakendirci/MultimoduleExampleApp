@@ -32,27 +32,22 @@ A News Application that leverages advanced modularization concepts, modern andro
 Modularisation is done based in feature and then layer
 
 app
-Markup : ```javascript
-         ```core
-news-details
+•core
+•news
   data
   domain
   presentation
-news
+•news-details
   data
   domain
   presentation
-category
+•category
   data
   domain
   presentation
-search
+•search
   data
   domain
   presentation
 
 
-  News API
-We using NEWS API to get data and show in app. Create your own API Key and replace NEWS_KEY in gradle.properties present in the project root.
-
-NEWS_KEY="<NEWS_API_KEY>"
