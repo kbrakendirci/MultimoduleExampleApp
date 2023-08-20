@@ -39,35 +39,35 @@ app
 
 •news
 
+    •data
+  
+    •domain
+  
+    •presentation
+  
+•news-details
+
+     data
+  
+     domain
+  
+     presentation
+  
+•category
+
     data
   
     domain
   
     presentation
   
-•news-details
-
-           data
-  
-           domain
-  
-           presentation
-  
-•category
-
-  data
-  
-  domain
-  
-  presentation
-  
   
 •search
 
-  data
+   data
   
-  domain
+   domain
   
-  presentation
+   presentation
 
 
