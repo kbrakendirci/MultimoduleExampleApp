@@ -47,11 +47,11 @@ app
   
 •news-details
 
-  data
+           data
   
-  domain
+           domain
   
-  presentation
+           presentation
   
 •category
 
