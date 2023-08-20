@@ -37,10 +37,12 @@ Modularisation is done based in feature and then layer
 app
 
 <ul>
-<li>*core</li>
+<li>core</li>
+  <ul>
 <li>bar</li>
 <li>baz</li>
 <li>boo</li>
+  </ul>
 </ul>
 
 
