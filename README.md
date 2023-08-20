@@ -45,13 +45,21 @@ app
   </ul>
 </ul>
 
+<ul>
+<li>core</li>
+<li>news</li>
+  <ul>
+<li>data</li>
+<li>domain</li>
+<li>presentation</li>
+  </ul>
+<li>news-details</li>
+<li>search</li>
+<li>category</li>
+</ul>
 
-*core
-*news
-   *data
-    *domain
-    *presentation
-  
+
+
 •news-details
 
      data
@@ -60,7 +68,7 @@ app
   
      presentation
   
-•category
+•news-details
 
     data
   
