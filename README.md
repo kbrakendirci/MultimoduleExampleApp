@@ -38,11 +38,8 @@ app
 *core
 
 *news
-
     *data
-  
     *domain
-  
     *presentation
   
 •news-details
