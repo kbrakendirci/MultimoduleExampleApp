@@ -1,4 +1,4 @@
-<p>#5News App </p>
+News App 
 
 Tech & Toolset
 
